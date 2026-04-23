@@ -59,13 +59,13 @@ document.addEventListener('DOMContentLoaded', () => {
             const btn = bookingForm.querySelector('button');
             const originalText = btn.innerText;
             
-            btn.innerText = 'Sending...';
+            btn.innerText = '전송 중...';
             btn.style.opacity = '0.8';
             btn.disabled = true;
 
             // Simulate API call
             setTimeout(() => {
-                alert('Thank you for reaching out! We will contact you soon with a magical quote.');
+                alert('문의해 주셔서 감사합니다! 곧 마법 같은 견적과 함께 연락드리겠습니다.');
                 bookingForm.reset();
                 btn.innerText = originalText;
                 btn.style.opacity = '1';
