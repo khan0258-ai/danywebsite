@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BalloonMagic | Premium Balloon Art Services</title>
+    <meta name="description" content="Elevate your events with BalloonMagic. Premium, custom balloon artistry for weddings, corporate events, and luxury parties.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">Balloon<span>Magic</span></a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact" class="btn-primary">Book Now</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg">
+            <img src="assets/hero_bg.png" alt="Luxury Yellow Balloon Arch">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="container hero-content">
+            <h1 class="fade-in-up">Transforming Spaces with <span>Air & Art</span></h1>
+            <p class="fade-in-up delay-1">Premium custom balloon artistry for events that demand to be remembered.</p>
+            <div class="hero-buttons fade-in-up delay-2">
+                <a href="#portfolio" class="btn-primary">View Portfolio</a>
+                <a href="#contact" class="btn-secondary">Request a Quote</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse"></div>
+        </div>
+    </section>
+
+    <!-- Services / About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>The Art of <span>Celebration</span></h2>
+                <p>We craft unforgettable experiences using the highest quality balloons and innovative designs.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card slide-up">
+                    <div class="icon">✨</div>
+                    <h3>Luxury Events</h3>
+                    <p>Elevate your weddings, galas, and high-end parties with bespoke balloon installations.</p>
+                </div>
+                <div class="service-card slide-up delay-1">
+                    <div class="icon">🏢</div>
+                    <h3>Corporate</h3>
+                    <p>Make a lasting impression with branded arches, columns, and centerpieces.</p>
+                </div>
+                <div class="service-card slide-up delay-2">
+                    <div class="icon">🎈</div>
+                    <h3>Custom Art</h3>
+                    <p>From cute characters to complex sculptures, imagination is the only limit.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our <span>Masterpieces</span></h2>
+                <p>A glimpse into the magic we create.</p>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <img src="assets/portfolio_1.png" alt="Cute Balloon Animal Art">
+                    <div class="portfolio-overlay">
+                        <h3>Custom Characters</h3>
+                        <p>Intricate and playful</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="assets/portfolio_2.png" alt="Elegant Balloon Centerpieces">
+                    <div class="portfolio-overlay">
+                        <h3>Corporate Elegance</h3>
+                        <p>Sophisticated gold & yellow tones</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="assets/hero_bg.png" alt="Grand Arch">
+                    <div class="portfolio-overlay">
+                        <h3>Grand Entrances</h3>
+                        <p>Make a statement</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action / Booking Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h2>Ready for some <span>Magic?</span></h2>
+                    <p>Tell us about your upcoming event, and we'll design a custom balloon experience tailored just for you.</p>
+                    <ul class="contact-details">
+                        <li><span>Email:</span> hello@balloonmagic.com</li>
+                        <li><span>Phone:</span> +82 10-1234-5678</li>
+                        <li><span>Location:</span> Seoul, South Korea</li>
+                    </ul>
+                </div>
+                <div class="contact-form-container">
+                    <form class="contact-form" id="bookingForm">
+                        <div class="form-group">
+                            <input type="text" id="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="event_type" placeholder="Type of Event (e.g., Wedding, Birthday)" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="date" id="date" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" rows="4" placeholder="Tell us more about your vision..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary w-100">Send Request</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">Balloon<span>Magic</span></div>
+                <p>&copy; 2026 BalloonMagic. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#">Instagram</a>
+                    <a href="#">Facebook</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
