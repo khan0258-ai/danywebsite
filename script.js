@@ -51,23 +51,63 @@ document.addEventListener('DOMContentLoaded', () => {
     const fadeElements = document.querySelectorAll('.fade-in-up, .slide-up');
     fadeElements.forEach(el => observer.observe(el));
 
-    // 4. Form Submission Handling (Mock)
+    // 4. Language Switcher Logic
+    let currentLang = localStorage.getItem('lang') || 'ko';
+    const langSelect = document.getElementById('lang-select');
+    if (langSelect) {
+        langSelect.value = currentLang;
+    }
+
+    function updateLanguage(lang) {
+        if (!translations[lang]) return;
+        
+        // Update innerHTML/innerText
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+            const key = el.getAttribute('data-i18n');
+            if (translations[lang][key]) {
+                el.innerHTML = translations[lang][key];
+            }
+        });
+
+        // Update placeholders
+        document.querySelectorAll('[data-i18n-ph]').forEach(el => {
+            const key = el.getAttribute('data-i18n-ph');
+            if (translations[lang][key]) {
+                el.setAttribute('placeholder', translations[lang][key]);
+            }
+        });
+
+        document.documentElement.lang = lang;
+        localStorage.setItem('lang', lang);
+        currentLang = lang;
+    }
+
+    // Initial translation application
+    updateLanguage(currentLang);
+
+    if (langSelect) {
+        langSelect.addEventListener('change', (e) => {
+            updateLanguage(e.target.value);
+        });
+    }
+
+    // 5. Form Submission Handling (Mock)
     const bookingForm = document.getElementById('bookingForm');
     if (bookingForm) {
         bookingForm.addEventListener('submit', (e) => {
             e.preventDefault();
             const btn = bookingForm.querySelector('button');
-            const originalText = btn.innerText;
+            const originalText = btn.innerHTML;
             
-            btn.innerText = '전송 중...';
+            btn.innerHTML = translations[currentLang].alert_sending;
             btn.style.opacity = '0.8';
             btn.disabled = true;
 
             // Simulate API call
             setTimeout(() => {
-                alert('문의해 주셔서 감사합니다! 곧 마법 같은 견적과 함께 연락드리겠습니다.');
+                alert(translations[currentLang].alert_success);
                 bookingForm.reset();
-                btn.innerText = originalText;
+                btn.innerHTML = originalText;
                 btn.style.opacity = '1';
                 btn.disabled = false;
             }, 1500);

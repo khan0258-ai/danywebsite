@@ -527,6 +527,37 @@ footer {
 }
 
 /* =========================================
+   Language Switcher
+   ========================================= */
+.lang-switcher {
+    margin-left: 1rem;
+}
+
+#lang-select {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background-color: transparent;
+    color: var(--bg-white);
+    font-family: inherit;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    outline: none;
+    transition: var(--transition);
+}
+
+.navbar.scrolled #lang-select {
+    color: var(--accent);
+    border-color: rgba(0, 0, 0, 0.2);
+}
+
+#lang-select option {
+    background-color: var(--bg-white);
+    color: var(--accent);
+}
+
+/* =========================================
    Animations
    ========================================= */
 @keyframes slowZoom {
